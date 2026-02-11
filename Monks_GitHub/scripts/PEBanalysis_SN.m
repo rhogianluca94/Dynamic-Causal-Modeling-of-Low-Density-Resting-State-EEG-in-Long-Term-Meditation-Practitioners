@@ -4,8 +4,8 @@ clear
 
 Pbase = fullfile(pwd, ['..' filesep]);
 Pmetadata     = fullfile(Pbase, 'spm_datasets_anon'); 
-Pdata     = fullfile(Pbase, 'models\SN\fitted_adjusted'); 
-Psave = fullfile(Pdata, 'PEBs_180sec_DCT_sep_6DTC/');
+Pdata     = fullfile(Pbase, ['models' filesep 'SN' filesep 'fitted_adjusted']); 
+Psave = fullfile(Pdata, 'PEBs_180sec_DCT_sep_6DTC');
 
 Pgcm = Pdata;
 Presults = Pgcm; 
