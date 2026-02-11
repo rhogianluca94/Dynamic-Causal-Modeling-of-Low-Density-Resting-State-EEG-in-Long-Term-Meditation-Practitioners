@@ -5,22 +5,22 @@
 This repository contains the EEG resting-state data and the Matlab source code used for the effective connectivity analyses presented in the research paper:
 
 > **Dynamic Causal Modeling of Low-Density Resting-State EEG in Long-Term Meditation Practitioners**
-> *Rho, G., Bossi, F., Norbu, N., et al.*
+> *Rho, G., et al.*
 
 The shared code implements a hierarchical **Dynamic Causal Modeling (DCM)** and **Parametric Empirical Bayes (PEB)** analysis to investigate how long-term meditation practice modulates extrinsic connectivity within the **Default Mode Network (DMN)** and the **Salience Network (SN)**.
 
-## 📋 Prerequisites
+## Prerequisites
 
 To run these scripts, the following are required:
 
 1. **MATLAB** (tested on version **v2021b**).
 2. **SPM12 (Statistical Parametric Mapping)**:
-   * ⚠️ **Important:** The analysis was validated using **SPM12 version v7771**. We strongly recommend using this specific version to ensure exact reproducibility of the results.
+   * **Important:** The analysis was validated using **SPM12 version v7771**. We strongly recommend using this specific version to ensure exact reproducibility of the results.
 3. **Input Data**:
    * Anonymized pre-processed EEG data must be located in a folder named `spm_datasets_anon`.
    * The data consists of `.mat` and `.dat` pair of files (SPM format) corresponding to **5 minutes of resting-state recordings** using a low-density 19-channels EEG cap.
 
-## 📂 Project Structure
+## Project Structure
 
 The scripts assume the following directory structure. Please ensure your local environment matches this layout:
 
@@ -42,7 +42,7 @@ Project_Root/
     └── SN/
 ```
 
-## 🚀 Usage & Workflow
+## Usage & Workflow
 
 The analysis is performed in a hierarchical manner, moving from single-subject model inversion to group-level inference (refer to the paper for theoretical details).
 
@@ -72,7 +72,7 @@ This step fits a PEB model over the single-subject windows to estimate the effec
 Set `fitPEBofPEBs = 1`.
 This step takes the results from Level 2 (the single-subject PEBs) and fits a "PEB of PEBs". It infers how group-level factors (specifically, the level of meditation experience) modulate the parameters estimated at the lower level (i.e., the baseline connectivity strength and its temporal fluctuations).
 
-## 📄 Reference
+## Reference
 
 If you use this code, the methodology, or the resting-state datasets in your research, please cite the original paper:
 
