@@ -1,8 +1,8 @@
 # Dynamic Causal Modeling of Low-Density Resting-State EEG in Long-Term Meditation Practitioners
 
-**MATLAB code and resting-state data for Dynamic Causal Modeling (DCM) and PEB analysis of resting-state EEG in long-term meditation practitioners (focus on DMN & SN).**
+**MATLAB code for Dynamic Causal Modeling (DCM) and PEB analysis of resting-state EEG in long-term meditation practitioners (focus on DMN & SN).**
 
-This repository contains the EEG resting-state data and the Matlab source code used for the effective connectivity analyses presented in the research paper:
+This repository contains the MATLAB source code used for the effective connectivity analyses presented in the research paper:
 
 > **Dynamic Causal Modeling of Low-Density Resting-State EEG in Long-Term Meditation Practitioners**
 > *Rho, G., et al.*
@@ -16,9 +16,12 @@ To run these scripts, the following are required:
 1. **MATLAB** (tested on version **v2021b**).
 2. **SPM12 (Statistical Parametric Mapping)**:
    * **Important:** The analysis was validated using **SPM12 version v7771**. We strongly recommend using this specific version to ensure exact reproducibility of the results.
-3. **Input Data**:
-   * Anonymized pre-processed EEG data must be located in a folder named `spm_datasets_anon`.
-   * The data consists of `.mat` and `.dat` pair of files (SPM format) corresponding to **5 minutes of resting-state recordings** using a low-density 19-channels EEG cap.
+3. **Input Data (Download Required)**:
+   * The EEG datasets are **not included** in this repository. They are available as **Supplementary Material** associated with the original paper.
+   * **Setup Instructions:**
+     1. Download the dataset from the paper's supplementary material.
+     2. Create a folder named `spm_datasets_anon` in the root directory of this project (see structure below).
+     3. Place the downloaded `.mat` and `.dat` file pairs inside this folder.
 
 ## Project Structure
 
@@ -26,7 +29,7 @@ The scripts assume the following directory structure. Please ensure your local e
 
 ```text
 Project_Root/
-├── spm_datasets_anon/       # Input: Pre-processed single-subject .mat files
+├── spm_datasets_anon/       # Input: Create this folder & place downloaded .mat/.dat files here
 ├── scripts/                 # Source code (this repository)
 │   ├── fit_GMC_models_pipeline.m
 │   ├── DCM_CSD_defineModels_DMN.m
