@@ -79,4 +79,4 @@ This step takes the results from Level 2 (the single-subject PEBs) and fits a "P
 
 If you use this code, the methodology, or the resting-state datasets in your research, please cite the original paper:
 
-> Rho, G., Bossi, F., Norbu, N., Kechok, J., Sherab, N., Soepa, J., Thakchoe, J., Greco, A., Scilingo, E. P., Vanello, N., Neri, B., & Callara, A. L. "Dynamic Causal Modeling of Low-Density Resting-State EEG in Long-Term Meditation Practitioners".
+> Rho, Gianluca, et al. "Dynamic causal modeling of low-density resting-state EEG in long-term meditation practitioners." Scientific Reports (2026).
